@@ -1,0 +1,10 @@
+apiVersion: v12
+kind: pod
+metadata:
+   name: Tesing_for_Image_pull
+   spec:
+      containers:
+         - name: neo4j-server
+           image: newo4j
+           imagePullPolicy: Always
+           command: ["echo", "SUCCESS"]
