@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: db
+  labels:
+    app: db
+spec:
+  containers:
+    - name: db-cntr
+      image: postgres
+      ports:
+        - containerPort: 5432
+      env:  
+        - name: POSTGRES_PASSWORD
+          value: mysecretpassword
+        - name: POSTGRES_USER
+          value: posgtres
